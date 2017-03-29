@@ -1,11 +1,14 @@
 package pw.vhome.android.sonarr.util;
 
+import android.net.Uri;
 import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.net.URI;
+import java.net.URL;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -39,6 +42,7 @@ public class JsonBuilder {
                 String tvTitle = seriesObj.getString("title");
                 String tvStatus = seriesObj.getString("status");
                 String tvImdb = seriesObj.getString("imdbId");
+                Uri poster = Uri.parse(seriesObj.getJSONArray("images").getJSONObject(1).getString("url"));
 
                 String epTitle = episodeObj.getString("title");
                 int epNumber = episodeObj.getInt("episodeNumber");
@@ -55,7 +59,7 @@ public class JsonBuilder {
                 //System.out.println(newDateString);
                 Log.d(TAG, "Episode: "+epTitle);
 
-                episode.add(new Episode(new Series(tvTitle, tvStatus, tvImdb), epTitle, epNumber, epSNumber, epHasFile, epMonitored, epAirDateUtcParsed));
+                episode.add(new Episode(new Series(tvTitle, tvStatus, tvImdb, poster), epTitle, epNumber, epSNumber, epHasFile, epMonitored, epAirDateUtcParsed));
             }
 
 

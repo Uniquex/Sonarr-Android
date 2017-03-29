@@ -1,5 +1,9 @@
 package pw.vhome.android.sonarr.dataobj;
 
+import android.net.Uri;
+
+import java.net.URI;
+
 /**
  * Created by wvitz on 21.03.2017.
  */
@@ -8,13 +12,15 @@ public class Series {
     private String title;
     private String imdbID;
     private String status;
+    private Uri poster;
 
 
 
-    public Series(String title, String status, String imdbID) {
+    public Series(String title, String status, String imdbID, Uri poster) {
         this.title = title;
         this.status = status;
         this.imdbID = imdbID;
+        this.poster  = poster;
     }
 
     public String getTitle() {
@@ -40,5 +46,13 @@ public class Series {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Uri getPoster() {
+        return poster;
+    }
+
+    public void setPoster(Uri poster) {
+        this.poster = poster;
     }
 }
