@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Sonarr</string>
+    <string name="title_activity_pitem_activity">pitem_activity</string>
+    <string name="action_settings">Settings</string>
 </resources>

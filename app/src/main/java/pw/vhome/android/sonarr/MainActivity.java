@@ -42,65 +42,33 @@ public class MainActivity extends Activity {
         //tvEpisodes = (TextView) findViewById(R.id.episode_list);
         makeAPIQuery();
 
-        mPlanetTitles = new String[10];
-
-
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mDrawerList = (ListView) findViewById(R.id.left_drawer);
-
-        // Set the adapter for the list view
-        mDrawerList.setAdapter(new ArrayAdapter<String>(this,
-                R.layout.drawer_list_item, mPlanetTitles));
-        // Set the list's click listener
-        mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-
 
     }
 
-    private void makeAPIQuery(){
+    private void makeAPIQuery() {
         //String apiQuery = mSearchBoxEditText.getText().toString();
-        URL githubSearchUrl = HttpHandler.buildUrl("2017-04-01", "2017-04-05");
+        URL githubSearchUrl = HttpHandler.buildUrl("2017-03-01", "2017-05-05");
         //mUrlDisplayTextView.setText(githubSearchUrl.toString());
         // COMPLETED (4) Create a new GithubQueryTask and call its execute method, passing in the url to query
         try {
             ArrayList<Episode> episodes = new JsonHandler().execute(githubSearchUrl).get();
 
-            ListViewAdapter lvadapter = new ListViewAdapter(getBaseContext(), 1, episodes);
-
-            lv_EpisodeList.setAdapter(lvadapter);
+            fillTextViews(episodes);
 
 
-        }catch(InterruptedException irexc){
+        } catch (InterruptedException irexc) {
             Log.w(TAG, "InterruptedException: " + irexc.toString());
-        }catch (ExecutionException exexc) {
+        } catch (ExecutionException exexc) {
             Log.w(TAG, "ExectutionException: " + exexc.toString());
         }
 
     }
 
-    private void fillTextViews(){
+    private void fillTextViews(ArrayList<Episode> episodes) {
+        ListViewAdapter lvadapter = new ListViewAdapter(getBaseContext(), R.layout.list_item, episodes);
 
+        lv_EpisodeList.setAdapter(lvadapter);
     }
 
 
-
-//    @Override
-//    protected void onPostExecute(Void result) {
-//        super.onPostExecute(result);
-//        // Dismiss the progress dialog
-//        if (pDialog.isShowing())
-//            pDialog.dismiss();
-//        /**
-//         * Updating parsed JSON data into ListView
-//         * */
-//        ListAdapter adapter = new SimpleAdapter(
-//                MainActivity.this, contactList,
-//                R.layout.list_item, new String[]{"name", "email",
-//                "mobile"}, new int[]{R.id.name,
-//                R.id.email, R.id.mobile});
-//
-//        lv.setAdapter(adapter);
-//    }
 }
-
-

@@ -1,14 +1,16 @@
 package pw.vhome.android.sonarr.dataobj;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by wvitz on 21.03.2017.
  */
 
-public class Episode {
+public class Episode implements Serializable{
     private Series series;
     private String title;
+    private String overview;
     private int episodeNumber;
     private int seasonNumber;
     private boolean hasFile;
@@ -16,9 +18,10 @@ public class Episode {
     private EpisodeFile file;
     private Date airDateUtc;
 
-    public Episode(Series series, String title, int episodeNumber, int seasonNumber, boolean hasFile, boolean monitored, Date airDateUtc) {
+    public Episode(Series series, String title, String overview, int episodeNumber, int seasonNumber, boolean hasFile, boolean monitored, Date airDateUtc) {
         this.series = series;
         this.title = title;
+        this.overview = overview;
         this.episodeNumber = episodeNumber;
         this.seasonNumber = seasonNumber;
         this.hasFile = hasFile;
@@ -26,13 +29,23 @@ public class Episode {
         this.airDateUtc = airDateUtc;
     }
 
-    public Episode(Series series, String title, int episodeNumber, int seasonNumber, boolean hasFile, boolean monitored, EpisodeFile file, Date airDateUtc) {
+    public String getOverview() {
+        return overview;
+    }
+
+    public void setOverview(String overview) {
+        this.overview = overview;
+    }
+
+    public Episode(Series series, String title, String overview, int episodeNumber, int seasonNumber, boolean hasFile, boolean monitored, EpisodeFile file, Date airDateUtc) {
         this.series = series;
         this.title = title;
+        this.overview = overview;
         this.episodeNumber = episodeNumber;
         this.seasonNumber = seasonNumber;
         this.hasFile = hasFile;
         this.monitored = monitored;
+
         this.file = file;
         this.airDateUtc = airDateUtc;
     }
@@ -69,7 +82,7 @@ public class Episode {
         this.seasonNumber = seasonNumber;
     }
 
-    public boolean isHasFile() {
+    public boolean hasFile() {
         return hasFile;
     }
 

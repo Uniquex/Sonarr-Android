@@ -17,6 +17,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Pitem_activity"
+            android:label="@string/title_activity_pitem_activity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pw.vhome.android.sonarr.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

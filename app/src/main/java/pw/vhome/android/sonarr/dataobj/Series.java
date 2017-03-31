@@ -2,21 +2,22 @@ package pw.vhome.android.sonarr.dataobj;
 
 import android.net.Uri;
 
+import java.io.Serializable;
 import java.net.URI;
 
 /**
  * Created by wvitz on 21.03.2017.
  */
 
-public class Series {
+public class Series implements Serializable{
     private String title;
     private String imdbID;
     private String status;
-    private Uri poster;
+    private String poster;
 
 
 
-    public Series(String title, String status, String imdbID, Uri poster) {
+    public Series(String title, String status, String imdbID, String poster) {
         this.title = title;
         this.status = status;
         this.imdbID = imdbID;
@@ -48,11 +49,11 @@ public class Series {
         this.status = status;
     }
 
-    public Uri getPoster() {
+    public String getPoster() {
         return poster;
     }
 
-    public void setPoster(Uri poster) {
+    public void setPoster(String poster) {
         this.poster = poster;
     }
 }

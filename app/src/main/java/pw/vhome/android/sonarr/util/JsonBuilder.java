@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import pw.vhome.android.sonarr.dataobj.Episode;
+import pw.vhome.android.sonarr.dataobj.EpisodeFile;
 import pw.vhome.android.sonarr.dataobj.Series;
 
 /**
@@ -42,24 +43,53 @@ public class JsonBuilder {
                 String tvTitle = seriesObj.getString("title");
                 String tvStatus = seriesObj.getString("status");
                 String tvImdb = seriesObj.getString("imdbId");
-                Uri poster = Uri.parse(seriesObj.getJSONArray("images").getJSONObject(1).getString("url"));
+
+                String poster = null;
+                EpisodeFile eFile;
+                JSONArray images = seriesObj.getJSONArray("images");
+
+                DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+
+                for(int y = 0; y < images.length(); y++) {
+                    if(images.getJSONObject(y).getString("coverType").equals("poster")){
+                        poster = seriesObj.getJSONArray("images").getJSONObject(y).getString("url");
+                    }
+                }
 
                 String epTitle = episodeObj.getString("title");
+                String epOverview = episodeObj.getString("overview");
                 int epNumber = episodeObj.getInt("episodeNumber");
                 int epSNumber = episodeObj.getInt("seasonNumber");
                 boolean epHasFile = episodeObj.getBoolean("hasFile");
                 boolean epMonitored = episodeObj.getBoolean("monitored");
                 String epAirDateUtc = episodeObj.getString("airDateUtc");
 
-                DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+
+                if(episodeObj.getBoolean("hasFile")){
+                    JSONObject epFileObject = episodeObj.getJSONObject("episodeFile");
+                    String quality = epFileObject.getJSONObject("quality").getJSONObject("quality").getString("name"); ;
+                    Double size = (double)epFileObject.getInt("size");
+                    String path = epFileObject.getString("path");
+                    Date dateAdded = df.parse(epFileObject.getString("dateAdded"));
+
+                    eFile = new EpisodeFile(quality, size, path, dateAdded);
+                }
+                else {
+                    eFile = new EpisodeFile(null, 0, null, null);
+                }
+
+
+
+
                 Date epAirDateUtcParsed;
 
                 epAirDateUtcParsed = df.parse(epAirDateUtc);
                 //String newDateString = df.format(startDate);
                 //System.out.println(newDateString);
-                Log.d(TAG, "Episode: "+epTitle);
+                //Log.d(TAG, "Episode: " + epTitle);
 
-                episode.add(new Episode(new Series(tvTitle, tvStatus, tvImdb, poster), epTitle, epNumber, epSNumber, epHasFile, epMonitored, epAirDateUtcParsed));
+                episode.add(new Episode(new Series(tvTitle, tvStatus, tvImdb, poster), epTitle, epOverview ,epNumber, epSNumber, epHasFile, epMonitored, eFile, epAirDateUtcParsed));
+
             }
 
 
