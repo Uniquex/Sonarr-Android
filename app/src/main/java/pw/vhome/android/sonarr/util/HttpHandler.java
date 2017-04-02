@@ -22,10 +22,13 @@ public class HttpHandler {
     private static final String SONARR_BASE_URL = "https://sonarr.vhome.pw/api";
     private static final String FUNCTION = "calendar";
     private static final String QUERYPARAM = "apikey";
-    private static final String API_KEY = "21175aef2a054167b4f5df35c7b3b57b";
+    private static final String API_KEY = "4e1ca3f72b744853825c0f5f1ec38a99";
 
     // API URL Example
     //"http://sonarr.ip:port/api/calendar?apikey=YourApiKey&start=2014-01-26&end=2014-01-27"
+
+    // Image URL Example
+    //
 
     public HttpHandler() {
     }

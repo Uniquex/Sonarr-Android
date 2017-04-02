@@ -11,6 +11,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.joanzapata.iconify.IconDrawable;
+import com.joanzapata.iconify.Iconify;
+import com.joanzapata.iconify.fonts.FontAwesomeIcons;
+import com.joanzapata.iconify.fonts.FontAwesomeModule;
 import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
@@ -19,6 +23,7 @@ import pw.vhome.android.sonarr.dataobj.Episode;
 
 public class Pitem_activity extends AppCompatActivity {
     private Toolbar toolbar;
+    private FloatingActionButton floatbutton;
     private ImageView ivPoster;
     private TextView tvSTitle;
     private TextView tvETitle;
@@ -38,15 +43,23 @@ public class Pitem_activity extends AppCompatActivity {
         this.toolbar = (Toolbar) findViewById(R.id.pitem_toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        floatbutton = (FloatingActionButton) findViewById(R.id.pitem_FAB);
+        floatbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Iconify.with(new FontAwesomeModule());
+
+        floatbutton.setImageDrawable(new IconDrawable(this, FontAwesomeIcons.fa_calendar_plus_o)
+                .color(R.color.colorPrimary)
+                .actionBarSize());
+
 
         ivPoster = (ImageView) findViewById(R.id.iv_Poster);
         tvSTitle = (TextView) findViewById(R.id.pitem_sT);
@@ -81,6 +94,10 @@ public class Pitem_activity extends AppCompatActivity {
 
         getSupportActionBar().setTitle(ep.getSeries().getTitle()+" - "+ep.getTitle());
 
+        String posterurl;
+
+
+
         Picasso.with(getApplicationContext())
                 .load(Uri.parse(ep.getSeries().getPoster()))
                 .into(ivPoster);
@@ -94,11 +111,17 @@ public class Pitem_activity extends AppCompatActivity {
 
         tvHasFile.setText(ep.hasFile() ? "hasFile" : "N/A");
 
+        String size = String.format("%.2f",((((Double)(ep.getFile().getSize()))/1024)/1024)/1024);
+
+        if(size.startsWith("-")){
+            size = size.substring(1);
+        }
+
+
         if(ep.hasFile()){
             tvPath.setText(ep.getFile().getPath());
-            tvSize.setText(String.format("%.2f",((((Double)(ep.getFile().getSize()))/1024)/1024)/1024)+" GB");
+            tvSize.setText(size + " GB");
             tvQuality.setText(ep.getFile().getQuality());
-
         }
     }
 

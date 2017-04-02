@@ -57,7 +57,7 @@ public class ListViewAdapter extends ArrayAdapter<Episode> {
         Date airdate = ep.getAirDateUtc();
         String poster = ep.getSeries().getPoster();
 
-        SimpleDateFormat sdf = new SimpleDateFormat("EEEE-dd-MM-yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("EEEE dd.MM.yyyy");
 
 
         if (v == null) {

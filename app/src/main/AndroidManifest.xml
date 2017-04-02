@@ -26,6 +26,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="pw.vhome.android.sonarr.MainActivity" />
         </activity>
+        <activity
+            android:name=".DiskStatus"
+            android:label="@string/title_activity_disk_status"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pw.vhome.android.sonarr.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

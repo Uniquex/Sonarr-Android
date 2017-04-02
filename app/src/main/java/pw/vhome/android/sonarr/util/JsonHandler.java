@@ -27,6 +27,7 @@ public class JsonHandler extends AsyncTask<URL, Void, ArrayList<Episode>> {
         String apiSearchResults = null;
         try {
             apiSearchResults = HttpHandler.getResponseFromHttpUrl(searchUrl);
+            Log.v(TAG, "HTTP response: "+apiSearchResults);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -37,8 +38,7 @@ public class JsonHandler extends AsyncTask<URL, Void, ArrayList<Episode>> {
     @Override
     protected void onPostExecute(ArrayList<Episode> apiSearchResults) {
         if (apiSearchResults != null && !apiSearchResults.equals("")) {
-            //mSearchResultsTextView.setText(githubSearchResults);
-            Log.d(TAG, "Result: " + apiSearchResults);
+            Log.v(TAG, "Result: " + apiSearchResults);
     }
     }
 }

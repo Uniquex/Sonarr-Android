@@ -53,6 +53,14 @@ public class JsonBuilder {
                 for(int y = 0; y < images.length(); y++) {
                     if(images.getJSONObject(y).getString("coverType").equals("poster")){
                         poster = seriesObj.getJSONArray("images").getJSONObject(y).getString("url");
+
+                        if(!poster.contains("http"))
+                        {
+                            StringBuilder sb = new StringBuilder(poster);
+                            sb.insert(0, "https://sonarr.vhome.pw").toString();
+                            poster = sb.append("?apikey=4e1ca3f72b744853825c0f5f1ec38a99").toString();
+                        }
+                        Log.v(TAG, "PosterLink: " + poster);
                     }
                 }
 
@@ -102,6 +110,8 @@ public class JsonBuilder {
             Log.w(TAG, "Jason Excpetion: "+jsonexc.toString());
         } catch (ParseException e) {
             Log.w(TAG, "DateParsing Error: " + e.toString());
+        } catch (NullPointerException npexc){
+            Log.v(TAG, "Nullpointer Exception (No return from api)");
         }
 
 
