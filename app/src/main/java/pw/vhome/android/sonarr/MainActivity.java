@@ -21,7 +21,10 @@ import com.mikepenz.crossfader.Crossfader;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.MiniDrawer;
+import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.ProfileSettingDrawerItem;
+import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.Nameable;
 import com.mikepenz.materialize.util.UIUtils;
@@ -56,12 +59,8 @@ public class MainActivity extends Activity {
 
         lv_EpisodeList = (ListView) findViewById(R.id.episode_list);
 
-
-
-
         buildDrawer(savedInstanceState);
 
-        //tvEpisodes = (TextView) findViewById(R.id.episode_list);
         makeAPIQuery();
 
 
@@ -76,16 +75,31 @@ public class MainActivity extends Activity {
         //        .withToolbar(toolbar)
                 .withInnerShadow(true)
                 .addDrawerItems(
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_Disk_Status).withIcon(new IconDrawable(this, FontAwesomeIcons.fa_hdd_o).color(R.color.colorPrimary).actionBarSize()),
                         new PrimaryDrawerItem().withName(R.string.drawer_item_Week).withIcon(new IconDrawable(this, FontAwesomeIcons.fa_calendar).color(R.color.colorPrimary).actionBarSize()),
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_Month).withIcon(new IconDrawable(this, FontAwesomeIcons.fa_calendar).color(R.color.colorPrimary).actionBarSize())
+                        new PrimaryDrawerItem().withName(R.string.drawer_item_Month).withIcon(new IconDrawable(this, FontAwesomeIcons.fa_calendar).color(R.color.colorPrimary).actionBarSize()),
+                        new DividerDrawerItem(),
+                        new PrimaryDrawerItem().withName(R.string.drawer_item_Disk_Status).withIcon(new IconDrawable(this, FontAwesomeIcons.fa_hdd_o).color(R.color.colorPrimary).actionBarSize()),
+                        new DividerDrawerItem(),
+                        new SecondaryDrawerItem().withName(R.string.drawer_settings).withIcon(new IconDrawable(this, FontAwesomeIcons.fa_cog).color(R.color.primary).actionBarSize())
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener(){
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         switch(position) {
-                            case 0:
+                            case 1:
+                                break;
+                            case 2:
+                                break;
+                            case 3:
                                 startActivity(new Intent(view.getContext(), DiskStatus.class));
+                            case 4:
+                                break;
+                            case 5:
+                                startActivity(new Intent(view.getContext(), SettingsActivity.class));
+                                break;
+                            default:
+                                break;
+
                         }
 
                         //Toast.makeText(MainActivity.this, ((Nameable) drawerItem).getName().getText(MainActivity.this), Toast.LENGTH_SHORT).show();
@@ -98,7 +112,7 @@ public class MainActivity extends Activity {
 
         //get the widths in px for the first and second panel
         int firstWidth = (int) UIUtils.convertDpToPixel(300, this);
-        int secondWidth = (int) UIUtils.convertDpToPixel(72, this);
+        int secondWidth = (int) UIUtils.convertDpToPixel(60, this);
 
         crossFader = new Crossfader()
                 .withContent(findViewById(R.id.episode_list))
@@ -114,7 +128,7 @@ public class MainActivity extends Activity {
 
     private void makeAPIQuery() {
         //String apiQuery = mSearchBoxEditText.getText().toString();
-        URL githubSearchUrl = HttpHandler.buildUrl("2017-01-01", "2017-05-05");
+        URL githubSearchUrl = new HttpHandler(getApplicationContext()).buildUrlEpisodes("2017-01-01", "2017-05-05");
         //mUrlDisplayTextView.setText(githubSearchUrl.toString());
         // COMPLETED (4) Create a new GithubQueryTask and call its execute method, passing in the url to query
         try {

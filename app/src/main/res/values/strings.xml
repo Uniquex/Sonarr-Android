@@ -8,4 +8,17 @@
     <string name="drawer_item_Month">This month</string>
     <string name="drawer_item_Week">This week</string>
     <string name="title_activity_disk_status">DiskStatus</string>
+    <string name="drawer_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <string name="Settings_Server_Url_Default">https://example.com</string>
+    <string name="Settings_Server_Url">Server Url</string>
+    <string name="Settings_Server_Port">Port</string>
+    <string name="Settings_Server_Port_Default"></string>
+    <string name="Settings_General">General Settings</string>
+
+
+
 </resources>

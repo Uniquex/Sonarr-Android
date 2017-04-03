@@ -15,6 +15,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+import pw.vhome.android.sonarr.DiskStatus;
+import pw.vhome.android.sonarr.dataobj.Disk;
 import pw.vhome.android.sonarr.dataobj.Episode;
 import pw.vhome.android.sonarr.dataobj.EpisodeFile;
 import pw.vhome.android.sonarr.dataobj.Series;
@@ -60,7 +62,7 @@ public class JsonBuilder {
                             sb.insert(0, "https://sonarr.vhome.pw").toString();
                             poster = sb.append("?apikey=4e1ca3f72b744853825c0f5f1ec38a99").toString();
                         }
-                        Log.v(TAG, "PosterLink: " + poster);
+                        //Log.v(TAG, "PosterLink: " + poster);
                     }
                 }
 
@@ -117,5 +119,31 @@ public class JsonBuilder {
 
 
         return episode;
+    }
+
+    public static ArrayList<Disk> getDiskStatus(String apiQuery){
+        ArrayList<Disk> disklist = new ArrayList<>();
+
+        try{
+            JSONArray disks = new JSONArray(apiQuery);
+
+            for(int x = 0; x < disks.length(); x++) {
+
+                String path = disks.getJSONObject(x).getString("path");
+                String freeSpace = disks.getJSONObject(x).getString("freeSpace");
+                String totalSpace = disks.getJSONObject(x).getString("totalSpace");
+
+                if(!disklist.isEmpty() && disklist.get(0).getFreeSpace().equals(freeSpace)){
+                    disklist.add(new Disk(path, null, freeSpace, totalSpace));
+                } else if(x == 0){
+                    disklist.add(new Disk(path, null, freeSpace, totalSpace));
+                }
+            }
+
+        } catch (JSONException jsexc){
+            Log.w(TAG, jsexc.toString());
+        }
+
+        return disklist;
     }
 }

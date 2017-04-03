@@ -2,13 +2,76 @@
 <items version="2" >
 
     <item
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.3.1_593aa88254d4ac4bf1143b18765f0cfdd3d66c9d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\libs\httpclient-4.5.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d1577ae15f01ef5438c5afc62162457c00a34713">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\httpclient-4.5.3_362d3a9af49f7395689c4b2d0d7e5af75101987e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.joanzapata.iconify\android-iconify\2.2.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="970b2eadc8805e4e04a9008f97368c7b8cc78651">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.joanzapata.iconify-android-iconify-2.2.2_635f653428b22b27c59946de1196bee1a1f6fbcb.jar" />
+    </item>
+    <item
         is-multidex="true"
-        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\jars\classes.jar"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\design\25.3.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
-        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.2.0_66a1aab395c994ae0f260bc568d249ca0e3b2eb6\classes.dex" />
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.3.1_587362bea6ab19c57deafe5c5687a708febdf8ec\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.3.1_3a8c8610b42d0c0b94c6a905b17563999cb2b6e8\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.3.1_3a8c8610b42d0c0b94c6a905b17563999cb2b6e8.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.joanzapata.iconify\android-iconify\2.2.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="970b2eadc8805e4e04a9008f97368c7b8cc78651">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.joanzapata.iconify-android-iconify-2.2.2_635f653428b22b27c59946de1196bee1a1f6fbcb\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\design\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.android.support-design-25.3.1_587362bea6ab19c57deafe5c5687a708febdf8ec.jar" />
     </item>
     <item
         is-multidex="true"
@@ -20,22 +83,49 @@
         <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.mikepenz-fastadapter-2.1.0_512de852061fee8d723dcbb76bcafe676e04c132\classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.mikepenz\iconics-core\2.8.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
-        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.2.0_952a3132f4a5b617148e45a5ac523d9128dd5e84\classes.dex" />
+        sha1="dcac7435781db56e25ab17c3f662227c517fc327">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.mikepenz-iconics-core-2.8.0_ff184d0c072f3088299067d4c1b5439ed8313461.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.mikepenz\crossfader\1.5.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="05a8106b4fcd85311ead700e37a58faf16587ad5">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.mikepenz-crossfader-1.5.0_0dfe627b06de74c092f4dcd3b9853eba2de0379d.jar" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\design\25.2.0\jars\classes.jar"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.mikepenz\crossfader\1.5.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
-        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-25.2.0_4aec73eebdd08741803f05788608b225221a9364\classes.dex" />
+        sha1="05a8106b4fcd85311ead700e37a58faf16587ad5">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.mikepenz-crossfader-1.5.0_0dfe627b06de74c092f4dcd3b9853eba2de0379d\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.mikepenz\fastadapter\2.1.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7118aee70be2579da7bc488325e2c2ba9f668514">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.mikepenz-fastadapter-2.1.0_512de852061fee8d723dcbb76bcafe676e04c132.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wvitz\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\picasso-2.5.2_1d20c5e3dba6d733cf5ff977929b7c8807fada20.jar" />
     </item>
     <item
         is-multidex="true"
@@ -48,12 +138,48 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\jars\classes.jar"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
-        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.2.0_525f173dd2c19ea7e24eb68002a68c8a6ec7267d\classes.dex" />
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.3.1_485c31d80c9ec61d857d8dd3983473faae7056c7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wvitz\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.1_7b64c97c4ede863dd3f5bcaaf2942c36999cfe90\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\transition\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.3.1_73dd39a9cd193a36f9820c4ed2c3d7e65edba320\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.3.1_fae90e12e462cb084163b2c4c2ffb914da3add94\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.3.1_593aa88254d4ac4bf1143b18765f0cfdd3d66c9d\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -65,13 +191,49 @@
         <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\2\httpclient-4.5.3_362d3a9af49f7395689c4b2d0d7e5af75101987e\classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\wvitz\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
-        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.2.0_f0b50c13568789e3e6b5752a99ec9789795a160b\classes.dex" />
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.1_7b64c97c4ede863dd3f5bcaaf2942c36999cfe90.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\transition\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.3.1_73dd39a9cd193a36f9820c4ed2c3d7e65edba320.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.3.1_485c31d80c9ec61d857d8dd3983473faae7056c7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.3.1_fae90e12e462cb084163b2c4c2ffb914da3add94.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.3.1_6481d227feeefa64c06216b508ad0ab099ce85a8.jar" />
     </item>
     <item
         is-multidex="true"
@@ -84,12 +246,102 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.2.0\jars\classes.jar"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
-        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.2.0_2a4d914519ef4b2a2b6ed068458f398a993b7f84\classes.dex" />
+        sha1="9f74e8b4856a507383c00c9edd020abdb4960f72">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_a927da637cfeb79d52b7ce72a38155b33d4fe678\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.3.1_85b5fb8ccc226abeca12bbd61ac7bae4bcbd05b8.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.3.1_6481d227feeefa64c06216b508ad0ab099ce85a8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.mikepenz\materialdrawer\5.8.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="23703f7654d2321ad67ad7af4eff590d3abad1cf">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.mikepenz-materialdrawer-5.8.2_1ea9f9bc723f44fe0c336b32b21aa015267146f0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.3.1_a712fc371807b444c40c564c251dd41fe4038dfa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.3.1_85b5fb8ccc226abeca12bbd61ac7bae4bcbd05b8\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.mikepenz\materialdrawer\5.8.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="23703f7654d2321ad67ad7af4eff590d3abad1cf">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.mikepenz-materialdrawer-5.8.2_1ea9f9bc723f44fe0c336b32b21aa015267146f0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.3.1_a712fc371807b444c40c564c251dd41fe4038dfa.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.3.1_cd160734e4ae67eba071df46330be69c5577a78a\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.3.1_6e69282458cf7dd7322f3d36e5e205bb390e6169.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.3.1_a46942efc3c6ed8238856f3d7ecf0c1cd9bd7940\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -102,21 +354,39 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.2.0\jars\classes.jar"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
-        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.2.0_2527cfc42939eaf01c8f217ea5f770d746032829\classes.dex" />
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.3.1_6e69282458cf7dd7322f3d36e5e205bb390e6169\classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.2.0_803c8d2e20d447208a80d6a3ad89ddab3b12bb96\classes.dex" />
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.3.1_cd160734e4ae67eba071df46330be69c5577a78a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.3.1_a46942efc3c6ed8238856f3d7ecf0c1cd9bd7940.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.joanzapata.iconify\android-iconify-fontawesome\2.2.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="af20faf2a6fff6cac01bb9ee4130ee942a29ec22">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.joanzapata.iconify-android-iconify-fontawesome-2.2.2_ee188586d69b2881bdf2113ecfd06f8384d1169d.jar" />
     </item>
     <item
         is-multidex="true"
@@ -124,7 +394,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="23bc1b4d72121d5e3cc5e22ee5ec62380a489819">
+        sha1="8b54892f94bcabdecc3813824f52a5d5ff55701e">
         <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_56d52732a9b2bae7c5c22790804dd9300a0812d7\classes.dex" />
     </item>
     <item
@@ -137,85 +407,13 @@
         <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.joanzapata.iconify-android-iconify-fontawesome-2.2.2_ee188586d69b2881bdf2113ecfd06f8384d1169d\classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.2.0\jars\classes.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.mikepenz\materialize\1.0.1\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
-        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.2.0_1efa7837e3fae7a454bc2b3a3631754cba2cc849\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\wvitz\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
-        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.2.0_822bd7bf28d100f3beb1666546e84ad4e7345924\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.joanzapata.iconify\android-iconify\2.2.2\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="970b2eadc8805e4e04a9008f97368c7b8cc78651">
-        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.joanzapata.iconify-android-iconify-2.2.2_635f653428b22b27c59946de1196bee1a1f6fbcb\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.mikepenz\crossfader\1.5.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="05a8106b4fcd85311ead700e37a58faf16587ad5">
-        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.mikepenz-crossfader-1.5.0_0dfe627b06de74c092f4dcd3b9853eba2de0379d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
-        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.2.0_b2ae99fa4d750522826e25754aa4243c303e34e5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
-        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.2.0_01264f14bcc687ac2c5ba67f35c4522449aafdda\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.android.support\transition\25.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e51c2f662bb72419632af5192553c37e33890a99">
-        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-transition-25.2.0_2f5897364c35dadb87452e3c8d8f8f9bbbecc749\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f75ebc6237ff5531b32591e7d271105be696d50a">
-        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_a927da637cfeb79d52b7ce72a38155b33d4fe678\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.mikepenz\materialdrawer\5.8.2\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="23703f7654d2321ad67ad7af4eff590d3abad1cf">
-        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.mikepenz-materialdrawer-5.8.2_1ea9f9bc723f44fe0c336b32b21aa015267146f0\classes.dex" />
+        sha1="08303b8b376b0399b932f863fc616109833f7124">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\pre-dexed\debug\com.mikepenz-materialize-1.0.1_f48cc7d4d42a24af0fd17f3b414fc036822371b7.jar" />
     </item>
 
 </items>
