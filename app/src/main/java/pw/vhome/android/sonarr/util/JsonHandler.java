@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 
+import pw.vhome.android.sonarr.dataobj.Disk;
 import pw.vhome.android.sonarr.dataobj.Episode;
 
 /**

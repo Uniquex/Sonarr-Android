@@ -4,6 +4,8 @@ import android.app.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 
 import android.util.Log;
@@ -43,6 +45,7 @@ public class MainActivity extends Activity {
 
     private String TAG = MainActivity.class.getSimpleName();
     private ListView lv_EpisodeList;
+    private FloatingActionButton floatbutton;
 
 
     private MiniDrawer mDrawer;
@@ -50,9 +53,11 @@ public class MainActivity extends Activity {
     private Crossfader crossFader;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -60,9 +65,19 @@ public class MainActivity extends Activity {
 
         lv_EpisodeList = (ListView) findViewById(R.id.episode_list);
 
+        floatbutton = (FloatingActionButton) findViewById(R.id.mac_FAB);
+
         buildDrawer(savedInstanceState);
 
         makeAPIQuery();
+
+
+        floatbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                makeAPIQuery();
+            }
+        });
 
 
     }

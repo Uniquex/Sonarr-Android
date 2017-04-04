@@ -13,9 +13,10 @@
     tools:context="pw.vhome.android.sonarr.DiskStatus"
     tools:showIn="@layout/activity_disk_status">
 
-    <TextView
-        android:text="TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ds_path" />
+    <GridView
+        android:id="@+id/disk_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
 </RelativeLayout>

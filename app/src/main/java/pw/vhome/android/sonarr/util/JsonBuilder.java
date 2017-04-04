@@ -133,7 +133,7 @@ public class JsonBuilder {
                 String freeSpace = disks.getJSONObject(x).getString("freeSpace");
                 String totalSpace = disks.getJSONObject(x).getString("totalSpace");
 
-                if(!disklist.isEmpty() && disklist.get(0).getFreeSpace().equals(freeSpace)){
+                if(!disklist.isEmpty() && !disklist.get(0).getFreeSpace().equals(freeSpace) && !freeSpace.equals("0")){
                     disklist.add(new Disk(path, null, freeSpace, totalSpace));
                 } else if(x == 0){
                     disklist.add(new Disk(path, null, freeSpace, totalSpace));

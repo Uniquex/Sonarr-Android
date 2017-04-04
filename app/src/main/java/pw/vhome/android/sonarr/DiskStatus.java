@@ -7,7 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.GridView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -20,8 +22,7 @@ import pw.vhome.android.sonarr.util.JsonHandler;
 import pw.vhome.android.sonarr.util.JsonHandlerDisks;
 
 public class DiskStatus extends AppCompatActivity {
-    TextView path;
-
+    GridView gridView;
 
     private String TAG = MainActivity.class.getSimpleName();
 
@@ -34,30 +35,38 @@ public class DiskStatus extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        this.path = (TextView) findViewById(R.id.ds_path);
+        this.gridView = (GridView) findViewById(R.id.disk_list);
 
         makeAPIQuery();
     }
 
     private void makeAPIQuery() {
-        //String apiQuery = mSearchBoxEditText.getText().toString();
-        URL githubSearchUrl = new HttpHandler(getApplicationContext()).buildUrlDisks();
+
+        URL apiSearchUrl = new HttpHandler(getApplicationContext()).buildUrlDisks();
 
         try {
+            ArrayList<Disk> disks = new JsonHandlerDisks().execute(apiSearchUrl).get();
 
-            ArrayList<Disk> disks = new JsonHandlerDisks().execute(githubSearchUrl).get();
-
-            path.setText("");
-
-            for(int x = 0; x < disks.size(); x++){
-                path.append(this.path.getText()+disks.get(x).toString());
-            }
+            fillTextViews(disks);
 
 
         } catch (InterruptedException irexc) {
             Log.w(TAG, "InterruptedException: " + irexc.toString());
         } catch (ExecutionException exexc) {
             Log.w(TAG, "ExectutionException: " + exexc.toString());
+        }
+
+    }
+
+    private void fillTextViews(ArrayList<Disk> disks) {
+
+        if (disks == null) {
+            Toast.makeText(this, "Could not connect to Server", Toast.LENGTH_LONG).show();
+
+        } else {
+            DiskAdapter dadapter = new DiskAdapter(getApplicationContext(), R.layout.disk_item, disks);
+
+            gridView.setAdapter(dadapter);
         }
 
     }

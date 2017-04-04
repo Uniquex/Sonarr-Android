@@ -75,6 +75,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.github.zurche\plain-pie\v0.2.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="354f8ec77b46859241bc9daa1b7e63d39d8218f4">
+        <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.zurche-plain-pie-v0.2.2_4c4d9c1e8b6ea4bed355218c7787beb768441c96\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\exploded-aar\com.mikepenz\iconics-core\2.8.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -88,7 +97,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="def374843e8d9803341c1dee6bd13905a6262c1f">
+        sha1="197281de1451666930d374d0d343d8d10e02c715">
         <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_56d52732a9b2bae7c5c22790804dd9300a0812d7\classes.dex" />
     </item>
     <item
@@ -160,7 +169,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="7fcc0b2bdcba5c67eb7c09c7a1adf13f061ddeac">
+        sha1="f1963575f784485fd040ff6963c276e883fef8b7">
         <dex dex="C:\Users\wvitz\GIT\Sonarr-Android\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_a927da637cfeb79d52b7ce72a38155b33d4fe678\classes.dex" />
     </item>
     <item
