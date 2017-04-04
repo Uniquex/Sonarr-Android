@@ -27,6 +27,9 @@ public class JsonHandler extends AsyncTask<URL, Void, ArrayList<Episode>> {
         String apiSearchResults = null;
         try {
             apiSearchResults = HttpHandler.getResponseFromHttpUrl(searchUrl);
+            if(apiSearchResults == null){
+                return null;
+            }
             Log.v(TAG, "HTTP response: "+apiSearchResults);
         } catch (IOException e) {
             e.printStackTrace();

@@ -51,7 +51,9 @@ public class HttpHandler {
         port = null;
 
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this.context);
-        this.sonarBaseUrl = sharedPref.getString("server_url", null);
+        this.sonarBaseUrl = sharedPref.getString("server_url", "https://example.com");
+
+
         try{
             port = sharedPref.getString("server_port", null);
 
@@ -59,33 +61,38 @@ public class HttpHandler {
             Log.i(TAG, "No Port defined");
         }
 
-        try {
-            sonarBaseUrl = sonarBaseUrl.concat(port != null && !port.equals("0") ? (new String(":" + port)) : null);
-        } catch (NullPointerException npexc2)
-        {
-            Log.e(TAG, npexc2.toString());
+
+        if(sonarBaseUrl != null && port != null && !port.equals("0")) {
+            sonarBaseUrl = sonarBaseUrl.concat(":" + port);
+        }else if(sonarBaseUrl == null){
+            Log.i(TAG, "Base Url not defined");
+        }else if(port == null){
+            Log.i(TAG, "Port not defined");
         }
 
-        sonarBaseUrl = sonarBaseUrl.concat("/api");
+        if(sonarBaseUrl != null){
+            sonarBaseUrl = sonarBaseUrl.concat("/api");
 
-        Uri builtUri = Uri.parse(this.sonarBaseUrl).buildUpon()
-                .appendPath(FUNCTION)
-                .appendQueryParameter(QUERYPARAM, API_KEY)
-                .appendQueryParameter("start", startDate)
-                .appendQueryParameter("end", endDate)
-                .build();
+            Uri builtUri = Uri.parse(this.sonarBaseUrl).buildUpon()
+                    .appendPath(FUNCTION)
+                    .appendQueryParameter(QUERYPARAM, API_KEY)
+                    .appendQueryParameter("start", startDate)
+                    .appendQueryParameter("end", endDate)
+                    .build();
 
-        Log.i(TAG, builtUri.toString());
+            Log.i(TAG, builtUri.toString());
+            URL url;
 
-        URL url = null;
-
-        try {
-            url = new URL(builtUri.toString());
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
+            try {
+                url = new URL(builtUri.toString());
+                return url;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
         }
 
-        return url;
+        return null;
+
     }
 
     public URL buildUrlDisks() {
@@ -129,21 +136,29 @@ public class HttpHandler {
     }
 
     public static String getResponseFromHttpUrl(URL url) throws IOException {
-        HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-        try {
-            InputStream in = urlConnection.getInputStream();
+        if(url != null) {
+            try {
+                HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+                try {
+                    InputStream in = urlConnection.getInputStream();
 
-            Scanner scanner = new Scanner(in);
-            scanner.useDelimiter("\\A");
+                    Scanner scanner = new Scanner(in);
+                    scanner.useDelimiter("\\A");
 
-            boolean hasInput = scanner.hasNext();
-            if (hasInput) {
-                return scanner.next();
-            } else {
-                return null;
+                    boolean hasInput = scanner.hasNext();
+                    if (hasInput) {
+                        return scanner.next();
+                    } else {
+                        return null;
+                    }
+                } finally {
+                    urlConnection.disconnect();
+                }
+            } catch (NullPointerException npex) {
+                Log.w(TAG, "No response from httpServer" + url.toString());
             }
-        } finally {
-            urlConnection.disconnect();
         }
+
+        return null;
     }
 }

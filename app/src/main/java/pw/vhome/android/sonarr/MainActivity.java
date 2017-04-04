@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -127,12 +128,11 @@ public class MainActivity extends Activity {
     }
 
     private void makeAPIQuery() {
-        //String apiQuery = mSearchBoxEditText.getText().toString();
-        URL githubSearchUrl = new HttpHandler(getApplicationContext()).buildUrlEpisodes("2017-01-01", "2017-05-05");
-        //mUrlDisplayTextView.setText(githubSearchUrl.toString());
-        // COMPLETED (4) Create a new GithubQueryTask and call its execute method, passing in the url to query
+
+        URL apiSearchUrl = new HttpHandler(getApplicationContext()).buildUrlEpisodes("2017-01-01", "2017-05-05");
+
         try {
-            ArrayList<Episode> episodes = new JsonHandler().execute(githubSearchUrl).get();
+            ArrayList<Episode> episodes = new JsonHandler().execute(apiSearchUrl).get();
 
             fillTextViews(episodes);
 
@@ -146,9 +146,16 @@ public class MainActivity extends Activity {
     }
 
     private void fillTextViews(ArrayList<Episode> episodes) {
-        ListViewAdapter lvadapter = new ListViewAdapter(getBaseContext(), R.layout.list_item, episodes);
 
-        lv_EpisodeList.setAdapter(lvadapter);
+        if(episodes == null){
+            Toast.makeText(this, "Could not connect to Server", Toast.LENGTH_LONG).show();
+
+        }else{
+            ListViewAdapter lvadapter = new ListViewAdapter(getBaseContext(), R.layout.list_item, episodes);
+
+            lv_EpisodeList.setAdapter(lvadapter);
+        }
+
     }
 
 
